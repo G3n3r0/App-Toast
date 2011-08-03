@@ -124,6 +124,7 @@ $(document).ready(function() {
                 //var lie = "<a href='"+val.actions[1].link+"'>Like</a>";
                 var pic = "http://graph.facebook.com/"+val.from.id+"/picture";
                 //console.log(i,ppl,pic);
+                console.log(val)
                 var msg = val.message||val.name;
                 //console.log(i, msg);
                 var pimg = $("<img />").addClass("pimg").attr("src",pic);
