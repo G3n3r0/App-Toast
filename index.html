@@ -437,7 +437,7 @@ $(document).ready(function() {
         localStorage.setItem("widgets", JSON.stringify(arr));
     }
     function readContent() {
-        var arr = JSON.parse(localStorage.getItem("widgets"));
+        var arr = JSON.parse(localStorage.getItem("widgets"))||[];
         var arr2 = arr.reverse();
         $.each(arr2, function(i, val) {
             var img = $("<img />");
