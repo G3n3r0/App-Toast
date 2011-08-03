@@ -78,7 +78,7 @@ $(document).ready(function() {
     function getStream() {
         FB.api('/me/home', function(response) {
             //alert(response.name);
-            console.log(response);
+            //console.log(response);
             $("#stream").html("");
             $("#stream").append($("<button />").attr("id", "post").html("Post")).append($("<br />"));
             $.each(response.data, function(i, val) {
