@@ -78,7 +78,7 @@ $(document).ready(function() {
     function getStream() {
         FB.api('/me/home', function(response) {
             //alert(response.name);
-            console.log(response);
+            //console.log(response);
             $("#stream").html("");
             $("#stream").append($("<button />").attr("id", "post").html("Post")).append($("<br />"));
             $.each(response.data, function(i, val) {
@@ -120,11 +120,12 @@ $(document).ready(function() {
                 } else {
                     var likes = "";
                 }
-                var comment = "<a href='"+val.actions[0].link+"'>Comment</a>";
-                var lie = "<a href='"+val.actions[1].link+"'>Like</a>";
+                //var comment = "<a href='"+val.actions[0].link+"'>Comment</a>";
+                //var lie = "<a href='"+val.actions[1].link+"'>Like</a>";
                 var pic = "http://graph.facebook.com/"+val.from.id+"/picture";
                 //console.log(i,ppl,pic);
-                var msg = val.message||val.name;
+                console.log(val)
+                var msg = val.message||val.name||"";
                 //console.log(i, msg);
                 var pimg = $("<img />").addClass("pimg").attr("src",pic);
                 var ptxt = "<span><b>"+ppl+"</b><br />\n"+msg+"<br />"+othPic+likes+"</span>";
