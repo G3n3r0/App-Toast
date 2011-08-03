@@ -1,0 +1,23 @@
+iframe {
+    display: none;
+}
+body, html {
+    margin: 0px;
+    padding: 0px;
+    boder: none;
+    text-align: left;
+}
+#appsDock {
+    height: auto;
+}
+#trash, #add {
+    display: none;
+}
+#appsDock img:not(#trash):not(#add) {
+    display: block;
+    width: 75px;
+    height: 75px;
+}
+#appsDock img:not(#trash):not(#add):after {
+    content: "Mucho magico!"
+}

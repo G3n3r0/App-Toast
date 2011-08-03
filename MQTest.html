@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+html:root, html, body {
+    margin:0px;
+    padding:0px;
+    border: none;
+}
+#controls {
+    background-color: #c0c0c0; /* Old browsers */
+    background-image: -moz-linear-gradient(top, #c0c0c0 0%, #fcfcfc 100%); /* FF3.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0c0c0), color-stop(100%,#fcfcfc)); /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #c0c0c0 0%,#fcfcfc 100%); /* Chrome10+,Safari5.1+ */
+    background-image: -o-linear-gradient(top, #c0c0c0 0%,#fcfcfc 100%); /* Opera11.10+ */
+    background-image: -ms-linear-gradient(top, #c0c0c0 0%,#fcfcfc 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0c0c0', endColorstr='#fcfcfc',GradientType=0 ); /* IE6-9 */
+    background-image: linear-gradient(top, #c0c0c0 0%,#fcfcfc 100%); /* W3C */
+    padding-bottom: 5px;
+    border-bottom: 1px solid silver;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" language="JavaScript"></script>
+<script>
+$(document).ready(function() {
+    $("#add").live("click", function(e) {
+        var frame = $("<iframe />").attr("src", $("#url").val()).attr("width", $("#w").val()).attr("height", $("#h").val());
+        if($("#name").val()!="") {
+            frame.attr("title", $("#name").val());
+        }
+        $("body").append(frame);
+        $("#name").val("");
+        $("#url").val("http://");
+    });
+/*    $("#rem").live("click", function(e) {
+        $("iframe").addClass("quiver");
+        $(".quiver").click(function(e2) {
+            $(this).remove();
+            $(".quiver").unbind("click");
+            $(".quiver").removeClass("quiver");
+        });
+    });*/
+});
+</script>
+</head>
+<body>
+<div id="controls">
+<input type="url" value="http://" id="url" />
+<input type="text" placeholder="name" id="name" />
+<input type="number" min="10" max="3000" value="320" size="5" id="w" title="Width" />x<input type="number" min="10" max="3000" value="480" size="5" id="h" title="Height" />
+<button id="add">+</button>
+<!--<button id="rem">X</button>-->
+</div>
+</body>
+</html>

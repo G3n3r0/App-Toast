@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="624.51611"
+   height="624.52002"
+   id="svg2">
+  <title
+     id="title3857">App Toast Icon</title>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3791">
+      <stop
+         id="stop3793"
+         style="stop-color:#f8c800;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3795"
+         style="stop-color:#b48528;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <radialGradient
+       cx="365.04028"
+       cy="368.84888"
+       r="310.40259"
+       fx="365.04028"
+       fy="368.84888"
+       id="radialGradient3938"
+       xlink:href="#linearGradient3791"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.93975152,0,4.922573)" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>App Toast Icon</dc:title>
+        <dc:date>July 26, 2011</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>G3n3r0</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>G3n3r0</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:language>en</dc:language>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>toast</rdf:li>
+            <rdf:li>app</rdf:li>
+            <rdf:li>chibi</rdf:li>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>vector</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>A little icon for App Toast.</dc:description>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>G3n3r0</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-52.987724,-38.188053)"
+     id="layer1">
+    <path
+       d="M 129.29953,251.1838 C 100.94077,343.80846 52.489,602.20207 191.92898,637.06207"
+       id="path3009"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1" />
+    <path
+       d="M 583.86817,248.15334 C 698.46581,393.814 688.5689,484.93944 650.53824,637.06207"
+       id="path3011"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1" />
+    <path
+       d="m 181.82746,637.06207 c 150.97544,12.20821 316.42925,9.43874 472.75139,-10.10153"
+       id="path3013"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1" />
+    <path
+       d="M 123.23861,267.34624 C 7.7217386,283.33022 53.288563,73.280399 139.40105,68.346192 c 63.88478,-3.66057 409.93366,-24.256216 492.95444,13.131978 69.47052,31.28587 39.80529,171.86647 -31.31473,186.87822"
+       id="path3019"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1" />
+    <path
+       d="m 274.70844,640.97289 c -67.81869,-3.35901 -79.55836,-4.40693 -89.75393,-8.01172 -17.47737,-6.17938 -26.18339,-11.71817 -39.64661,-25.22331 -17.36301,-17.41704 -26.9867,-34.69521 -35.20209,-63.20109 -7.3479,-25.49583 -9.9176,-49.0769 -9.91316,-90.96893 0.003,-26.92179 0.72144,-44.44042 2.43636,-59.39697 4.90261,-42.75762 14.88178,-95.41818 24.30381,-128.25244 3.91324,-13.63701 4.14583,-15.29024 2.15113,-15.29024 -0.75609,0 -2.41601,3.58195 -3.68871,7.95988 l -2.314,7.95987 -13.63541,-0.66099 C 89.562435,264.92309 79.88137,260.17909 69.440005,246.28294 51.801626,222.80846 51.572432,178.89591 68.866885,136.47593 83.820462,99.79766 108.52749,75.120875 134.44621,70.97686 c 4.41829,-0.706419 28.39793,-2.268074 53.28809,-3.470346 182.0901,-8.795513 306.69316,-8.304895 381.83766,1.503464 57.61919,7.52084 78.8011,17.642532 91.1038,43.533582 6.4936,13.66584 8.8579,25.09407 8.76432,42.36396 -0.15796,29.15266 -7.85626,55.38203 -22.69802,77.3359 -10.60059,15.68036 -30.46936,30.96251 -43.22897,33.24977 -3.92491,0.70359 -4.77219,0.0246 -11.31371,-9.0658 -4.33,-6.0172 -7.58511,-9.32665 -8.3971,-8.53733 -0.81729,0.79445 0.38591,3.60171 3.13601,7.31686 28.91504,39.0617 41.94452,59.76792 56.29716,89.46648 11.25524,23.28943 17.17781,39.09623 22.46733,59.96322 6.71463,26.48902 8.30429,40.01711 8.32563,70.85153 0.0211,30.3895 -1.19729,43.94567 -6.99036,77.78175 -2.84666,16.62669 -14.42458,70.22469 -15.51662,71.83155 -1.18803,1.74807 -93.15633,10.2252 -149.83172,13.81066 -40.5781,2.56709 -189.46649,3.91886 -226.98127,2.06078 z"
+       id="path3789"
+       style="fill:url(#radialGradient3938);fill-opacity:1;stroke:#000000;stroke-width:2.82842708;stroke-opacity:1" />
+    <path
+       d="m 346.48231,258.28128 a 61.518291,78.488853 0 1 1 -123.03658,0 61.518291,78.488853 0 1 1 123.03658,0 z"
+       transform="matrix(1.0230902,0,0,1,-16.473131,-37.099)"
+       id="path3799"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1" />
+    <path
+       d="m 346.48231,258.28128 a 61.518291,78.488853 0 1 1 -123.03658,0 61.518291,78.488853 0 1 1 123.03658,0 z"
+       transform="matrix(1.0230902,0,0,1,159.59023,-40.634547)"
+       id="path3799-8"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1" />
+    <path
+       d="m 319.61226,246.26045 a 38.183765,38.183765 0 1 1 -76.36753,0 38.183765,38.183765 0 1 1 76.36753,0 z"
+       transform="translate(-7.0710678,-25.785292)"
+       id="path3819"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1" />
+    <path
+       d="m 319.61226,246.26045 a 38.183765,38.183765 0 1 1 -76.36753,0 38.183765,38.183765 0 1 1 76.36753,0 z"
+       transform="translate(171.11984,-28.613718)"
+       id="path3819-7"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1" />
+    <path
+       d="m 319.61227,439.67827 c 44.82498,41.59394 39.05332,36.68684 80.61017,0 z"
+       id="path3843"
+       style="fill:#f781ed;fill-opacity:1;stroke:#f781ed;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="m 360.62446,299.67112 31.1127,49.49748 -25.45585,36.76955"
+       id="path3855"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1" />
+    <rect
+       width="8.2643108"
+       height="7.6966701"
+       x="648.63678"
+       y="629.91602"
+       id="rect3959"
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:2.25495887;stroke-opacity:1" />
+    <path
+       d="m 598.34492,590.26953 c 1.62522,-1.33108 5.87008,0.73114 2.2539,1.63519 -0.82995,0.20749 -3.28323,-0.77741 -2.2539,-1.63519 z"
+       transform="translate(52.987724,38.188053)"
+       id="path3961"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-opacity:1" />
+  </g>
+</svg>

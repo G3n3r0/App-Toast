@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="439.6875"
+   height="72.4375"
+   id="svg3366"
+   version="1.1"
+   inkscape:version="0.48.1 "
+   sodipodi:docname="DockBG.svg">
+  <title
+     id="title3604">Dock Background</title>
+  <defs
+     id="defs3368">
+    <linearGradient
+       id="linearGradient3596">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3598" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0.66964287;"
+         offset="1"
+         id="stop3600" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3596"
+       id="radialGradient3602"
+       cx="326.78436"
+       cy="526.09442"
+       fx="326.78436"
+       fy="526.09442"
+       r="219.6244"
+       gradientTransform="matrix(-0.88769486,-0.00459943,8.52199e-4,-0.16487297,616.42083,619.36524)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="185.35148"
+     inkscape:cy="42.299376"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata3371">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Dock Background</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-114.53125,-495.90625)">
+    <path
+       style="fill:url(#radialGradient3602);fill-opacity:1;stroke:#000000;stroke-width:0.74513376px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 115.10865,567.95438 438.50368,-2.13959 -33.894,-69.5365 -372.83405,0 z"
+       id="path3530"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

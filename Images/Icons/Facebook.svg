@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="147.04276"
+   height="147.06544"
+   viewBox="0 0 148 148"
+   id="svg3323">
+  <title
+     id="title3346">Facebook Icon</title>
+  <defs
+     id="defs3325" />
+  <metadata
+     id="metadata3328">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Facebook Icon</dc:title>
+        <dc:date>7/21/11</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Uberpiglet</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="http://www.gnu.org/licenses/gpl-3.0.txt" />
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Uberpiglet</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:source>http://www.uberpiglet.com/images/Add_this_Icon_Set.zip</dc:source>
+        <dc:identifier>http://www.uberpiglet.com/vectors/addthis-icon-set/</dc:identifier>
+        <dc:language>en</dc:language>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title></dc:title>
+          </cc:Agent>
+        </dc:contributor>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-0.5118,-0.48237226)"
+     id="layer1">
+    <g
+       transform="translate(-294.03495,-101.30395)"
+       id="g3225">
+      <g
+         id="g3227">
+        <path
+           d="m 304.738,102.853 c 3.552,-1.327 7.408,-1.03 11.125,-1.054 36.575,0.044 73.148,-0.022 109.726,0.03 8.611,-0.307 16.322,7.45 15.979,16.058 0.027,38.329 0.031,76.661 -0.002,114.989 0.293,8.559 -7.393,16.238 -15.947,15.953 -38.365,0.03 -76.737,0.033 -115.104,-0.007 -8.552,0.296 -16.224,-7.376 -15.943,-15.927 -0.035,-38.355 -0.031,-76.715 -0.004,-115.07 -0.162,-6.494 4.106,-12.701 10.17,-14.972 z"
+           id="path3229"
+           style="fill:#3c5996" />
+        <path
+           d="m 304.738,102.853 c 3.552,-1.327 7.408,-1.03 11.125,-1.054 36.575,0.044 73.148,-0.022 109.726,0.03 8.611,-0.307 16.322,7.45 15.979,16.058 0.027,38.329 0.031,76.661 -0.002,114.989 0.293,8.559 -7.393,16.238 -15.947,15.953 -38.365,0.03 -76.737,0.033 -115.104,-0.007 -8.552,0.296 -16.224,-7.376 -15.943,-15.927 -0.035,-38.355 -0.031,-76.715 -0.004,-115.07 -0.162,-6.494 4.106,-12.701 10.17,-14.972 z"
+           id="path3231"
+           style="fill:#3c5996" />
+      </g>
+      <path
+         d="m 373.975,187.094 h -10.746 v -18.092 h 10.746 c 0,0 0,-12.089 0,-14.797 0,-2.707 -0.545,-20.813 22.626,-20.813 3.107,0 10.158,0 16.355,0 0,7.864 0,16.371 0,18.834 -4.645,0 -9.654,0 -12.033,0 -2.377,0 -4.783,2.49 -4.783,4.337 0,1.847 0,12.369 0,12.369 0,0 14.859,0 16.789,0 -0.672,9.487 -2.057,18.162 -2.057,18.162 h -14.818 v 53.771 h -22.079 v -53.771 z"
+         id="f"
+         style="fill:#ffffff" />
+    </g>
+  </g>
+</svg>

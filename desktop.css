@@ -1,0 +1,112 @@
+iframe {
+    width: 49.5%;
+    //height: 46%;
+    height: 92%;
+    resize: horizontal;
+}
+/*    margin: 0px;
+    padding: 0px;
+    background: blue;
+    border: none;
+    display: inline;
+}
+iframe:nth-child(2), iframe:nth-child(5) {
+    background: red;
+}*/
+#appsDock {
+    overflow: auto;
+    display: inline;
+    display: inline-block;
+    height:8%;
+    min-width:225px;
+    width: auto;
+    /*max-width: 100%;*/
+/*	background: gray;*/
+	text-align:center;
+	line-height:100%;
+	font-size:100%;
+    
+    background-image: url(Images/DockBG3.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#appsDock img {
+/*    background-image: url(http://www.w3.org/html/logo/badge/html5-badge-h-solo.png);
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px #666;
+    min-width: 30px;
+    max-width: 50px;
+    height: 75%;*/
+    vertical-align: middle;
+}
+#appsDock img:hover {
+    height: 90%;
+}
+div#pics {
+    position: absolute;
+    width: 100%;
+    height: 94%;
+    left: 0%;
+    top: 0%;
+    /*background: rgba(192, 192, 192, 0.5);*/
+}
+.pic {
+    display: inline-block;
+    margin:0px;
+    padding:0px;
+    width: 50%;
+//    height: 49%;
+    height: 98%;
+    /*border: 1px solid black;*/
+    background-color: rgba(192, 192, 192, 0.7);
+}
+/*.pics:nth-child(odd) {
+    float: left;
+}*/
+.quiver {
+    opacity: 0.5;
+}
+.quiver:hover {
+    opacity: 0.75;
+}
+#frameRep {
+    display:none;
+}
+body, html {
+    overflow: hidden;
+}
+.notMove {
+    cursor: pointer;
+}
+#add {
+    cursor: pointer;
+}
+#appsDock img:not(.notMove):not(#trash):not(#add) {
+    cursor:url(http://www.google.com/intl/en_ALL/mapfiles/openhand.cur),move;
+    cursor:-moz-grab;
+    cursor:grab;
+}
+/*.icon.grabbing:not(.notMove) {*/
+#appsDock img.grabbing:not(.notMove):not(#trash):not(#add) {
+    cursor:url(http://www.google.com/intl/en_ALL/mapfiles/closedhand.cur),move;
+    cursor:-moz-grabbing;
+    cursor:grabbing;
+}
+@media all and (max-width:500px) {
+    iframe:not(.first) {
+        display: none;
+    }
+    .first {
+        width: 100%;
+    }
+    .pic:nth-child(2) {
+        display: none;
+    }
+/*    .pic:first-child {
+        border-radius: 10px;
+    }*/
+    .pic:first-child {
+        width: 100%;
+    }
+}

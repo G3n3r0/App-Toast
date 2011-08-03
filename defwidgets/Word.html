@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Text Editor - App Toast</title>
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<style>
+body, html {
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    border:none;
+    overflow: hidden;
+}
+#controls {
+    background-color: silver;
+    width: 100%;
+    height: 5%;
+    margin:0px;
+}
+#curDoc {
+    font-family:  Helvetica, Arial,  sans-serif;
+    font-size: 1em;
+    outline: none;
+    background-color: #F0F0F0;
+    display: inline-block;
+    width:100%;
+    height:95%;
+    margin:0px;
+    padding:0px;
+    border: none;
+    resize: none;
+}
+#fileSelect {
+    height: 90%;
+}
+.fileExp {
+    border:none;
+    display:none;
+}
+button {
+    height: 90%;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+<script src="http://laboratorium.0xab.cd/jquery/fieldselection/0.1.0/jquery-fieldselection.pack.js"></script>
+<script src="../jquery.base64.min.js"></script>
+<script>
+$(document).ready(function() {
+    //localStorage["file-AbX"] = "hello";
+    function fileBrowse() {
+        var files = [];
+        var len = localStorage.length;
+        for(i=0;i<len;i++) {
+            var k = localStorage.key(i);
+            //console.log(k);
+            if(k.match(/^file-/gi)) {
+                var r = k.replace(/^file-/gi, "");
+                files.push([r, localStorage.getItem("file-"+r)]);
+            }
+        }
+        //console.log(files);
+        return files;
+    }
+    function updateFileSelect() {
+        var files = fileBrowse();
+        console.log(fileBrowse());
+        $("#fileSelect .rem").remove();
+        $.each(files, function(i, val) {
+            var opt = $("<option />");
+            opt.attr("value",val[0]);
+            opt.html(val[0]);
+            opt.addClass("rem");
+            $("#fileSelect").append(opt);
+        });
+    }
+    function getFile(name) {
+        return localStorage["file-"+name];
+    }
+    function openFile(name) {
+        window.curFile = name;
+        $("#curDoc").html(localStorage["file-"+name]);
+        $("#title").html(name);
+    }
+    function saveFile(name) {
+        if(!window.curFile) {
+            newFile();
+        }
+//        console.log($("#curDoc").html()||$("#curDoc").val());
+        localStorage["file-"+name] = $("#curDoc").html()||$("#curDoc").val();
+    }
+    function newFile(name) {
+        if(!name) {
+            var name = prompt("File name:", "Untitled");
+        }
+        if(name && !localStorage["file-"+name]) {
+            localStorage.setItem("file-"+name, "");
+            openFile(name);
+            updateFileSelect();
+        } else if(!name) {
+            alert("Never mind then.")
+        } else if(localStorage["file-"+name]) {
+            alert("Enter a new name, dingus!")
+        }
+    }
+    $("#fileSelect").live("change", function(e) {
+        //$("#curDoc").html(getFile($(this).val()));
+        openFile($(this).val());
+        //window.curFile=$(this).val();
+    });
+    updateFileSelect();
+    //newFile();
+    $("#save").live("click", function(e) {
+        saveFile(window.curFile);
+    });
+    $("#new").live("click", function(e) {
+        newFile();
+    });
+    function getCaret(el) { 
+        if (el.selectionStart) {
+            return el.selectionStart; 
+        } else if (document.selection) { 
+            el.focus(); 
+
+            var r = document.selection.createRange(); 
+            if (r == null) { 
+                return 0;
+            }
+
+            var re = el.createTextRange(), 
+                rc = re.duplicate(); 
+            re.moveToBookmark(r.getBookmark()); 
+            rc.setEndPoint('EndToStart', re); 
+
+            return rc.text.length; 
+        }
+        return 0; 
+    }
+    function exportToRTF() {
+        /*
+        {\rtf1\ansi{\fonttbl\f0\fswiss Helvetica;}\f0\pard
+        This is some {\b bold} text.\par
+        }
+        */
+        var lined = $("#curDoc").html().replace(/(\<br \/\>|\<br\>|\<p\>|\<\/p\>)/gi,"\\line\n");
+        var txt = "{\\rtf1\\utf-8{\\fonttbl\\f0\\fswiss Helvetica;}\\f0\\pard\n"+lined+"\\par\n}";
+        //console.log(txt)
+        var b64 = $.base64.encode(txt);
+        var url = "data:text/rtf;charset=utf-8;base64,"+b64;
+        $("<iframe />").attr("src",url).addClass("fileExp").attr("width","0").attr("height","0").appendTo("body");
+        //var w = window.open(url,"","width=300,height=300");
+        console.log(url)
+    }
+    $("#exp").click(exportToRTF);
+    $("#bold").click(function(e) {
+        console.log(getCaret(document.getElementById("curDoc")))
+    });
+    $("*").keydown(function(e) {
+        if(e.ctrlKey && e.keyCode==83) {
+            e.preventDefault();
+            saveFile(window.curFile);
+        } else if(e.ctrlKey && e.keyCode==78) {
+            e.preventDefault();
+            newFile();
+        } else if(e.ctrlKey && e.keyCode==69) {
+            e.preventDefault();
+            exportToRTF();
+        }
+    });
+    if(typeof($("#curDoc")[0].contentEditable) != 'undefined') {
+        $("#curDoc").remove();
+        var rep = $("<textarea />").attr("id", "curDoc");
+        $("body").append(rep);
+    }
+});
+</script>
+</head>
+<body>
+<div id="controls">
+<button id="save" title="Ctrl+S">Save</button>
+<button id="new" title="Ctrl+N">New</button>
+<button id="exp" title="Ctrl+E">Export</button>
+<select id="fileSelect">
+<option value=""></option>
+</select>
+<!--<button id="bold">B</button>-->
+<span id="title"></span>
+</div>
+<div id="curDoc" contenteditable>
+</div>
+</body>
+</html>

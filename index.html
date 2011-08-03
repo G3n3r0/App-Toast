@@ -1,0 +1,653 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>App Toast</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon-precomposed" href="./Images/Icons/App%20Toast/AppToastIconMedium.png" />
+<link rel="shortcut icon" href="./Images/Icons/App%20Toast/AppToastIconSmall.png" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<link rel="stylesheet" href="mobile.css" media="all and (max-device-width:615px)" />
+<link rel="stylesheet" href="desktop.css" media="all and (min-device-width:616px)" />
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="desktop.css" media="all" />
+<![endif]-->
+<style>
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    } to {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+        -moz-transform-origin: center center;
+        transform: rotate(0deg);
+    } to {
+        -moz-transform: rotate(360deg);
+        -moz-transform-origin: center center;
+        transform: rotate(360deg);
+    }
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+#down {
+    position: fixed;
+    bottom:0px;
+    z-index: 30;
+    left: 50%;
+    cursor: pointer;
+}
+#downDis {
+    position:fixed;
+    cursor:default;
+    bottom:0px;
+    z-index: 30;
+    left: 50%;
+    color: grey;
+}
+#up {
+    position: fixed;
+    top:0px;
+    z-index: 30;
+    left: 50%;
+    cursor: pointer;
+}
+#upDis {
+    position:fixed;
+    cursor:default;
+    top:0px;
+    z-index: 30;
+    left: 50%;
+    color: grey;
+}
+iframe {
+    margin: 0px;
+    padding: 0px;
+    /*background: blue;*/
+    border: none;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    background-color: white;
+}
+iframe:nth-child(3), iframe:nth-child(4) {
+    border-bottom:none;
+}
+iframe:nth-child(even) {
+    border-right: none;
+}
+/*iframe:nth-child(2), iframe:nth-child(3) {
+    background: red;
+}*/
+body {
+    text-align: center;
+    background-color: rgb(125,126,125); /* Old browsers */
+    background-image: -moz-linear-gradient(top, rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+    background-image: -o-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera11.10+ */
+    background-image: -ms-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+    background-image: linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+}
+#appsDock img {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  display: inline;
+  display: inline-block;
+  /*-moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0px 0px 7px #666;
+  -webkit-box-shadow: 0px 0px 7px #666;
+  box-shadow: 0px 0px 7px #666;*/
+  min-width: 30px;
+  max-width: 50px;
+  height: 75%;
+}
+#appsDock {
+    padding-left: 10px;
+    padding-right: 10px;
+    /*overflow: auto;*/
+}
+/*.pic:first-child {
+    border-top-left-radius: 10px;
+}
+.pic:nth-child(2) {
+    border-top-right-radius: 10px;
+}
+.pic:nth-child(3) {
+    border-bottom-left-radius: 10px;
+}
+.pic:nth-child(4) {
+    border-bottom-right-radius: 10px;
+}*/
+/*.pic:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.pic:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}*/
+#add {
+    cursor: pointer;
+}
+.overlay {
+    background-color: black;
+    background-color: rgba(0,0,0,0.5);
+}
+body {
+    -webkit-rotation: rotateY(0deg);
+    -webkit-transition: -webkit-rotation 1s linear;
+}
+.spin {
+    -webkit-animation-name: spin;
+    -moz-animation-name:spin;
+    -webkit-animation-duration: 30s;
+    -moz-animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -moz-animation-direction: normal;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+}
+</style>
+<link rel="stylesheet" href="print.css" media="print" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+<script src="storageFill.js" type="text/javascript"></script>
+<script src="modernizr.js" type="text/javascript"></script>
+<script src="json2.js" type="text/javascript"></script>
+<script src="jquery.preload-1.0.8-min.js" type="text/javascript"></script>
+<script src="jquery.base64.min.js" type="text/javascript"></script>
+<script src="iscroll.js" type="text/javascript"></script>
+<link rel="stylesheet" href="jquery.contextmenu.images/jquery.contextmenu.css" />
+<script src="jquery.contextmenu.images/jquery.contextmenu.js"></script>
+<script>
+$(document).ready(function() {
+    if(!localStorage.widgets) {
+        localStorage.widgets="[]";
+    }
+    if(!Modernizr.svg) {
+        $("#appsDock img").each(function(i, val) {
+            console.log(val);
+            $(val).attr("src", $(val).attr("src").replace(/\.svg/gi,".png"));
+        });
+    }
+    /*$("#appsDock img").preload({
+        placeholder:'http://fc04.deviantart.net/fs71/f/2010/102/3/c/404_stamp_by_5_3_10_4.gif',
+        notFound: "http://fc04.deviantart.net/fs71/f/2010/102/3/c/404_stamp_by_5_3_10_4.gif"
+    });*/
+    $("img").live("error", function () {
+        $(this).unbind("error").attr("src", "http://fc04.deviantart.net/fs71/f/2010/102/3/c/404_stamp_by_5_3_10_4.gif");
+    });
+    String.prototype.capitalize = function() {
+        return this.charAt(0).toUpperCase() + this.slice(1);
+    }
+/*    document.onselectstart = function() {return false;} // ie
+    document.onmousedown = function() {return false;}
+    $("#down").live("click", function(e) {
+        window.scrollTo(0,$("body").scrollTop()+window.innerHeight);
+        $("#upDis").attr("id", "up");
+        dis();
+    });
+    $("#up").live("click", function(e) {
+        window.scrollTo(0,$("body").scrollTop()-window.innerHeight);
+        $("#downDis").attr("id", "down");
+        dis();
+    });
+    function dis() {
+        if($("body").scrollTop()===0) {
+            $("#up").attr("id", "upDis");
+        } else if($("body").scrollTop()===document.body.offsetHeight-window.innerHeight) {
+            $("#down").attr("id", "downDis");
+        }
+    }
+    dis();
+*/
+    $("body").live("scroll", function(e) {
+        window.scrollTo(0,0);
+        e.preventDefault();
+        return false;
+    });
+    if(Modernizr.mq("all and (min-device-width:616px)") && Modernizr.draganddrop) {
+        $("#appsDock img:not(#add,#trash)").live("dragstart", function(e) {
+            //console.log(1,e);
+            window.curElem = e.currentTarget;
+            $(this).css("opacity", "0.5");
+            var pics = $("<div />").attr("id", "pics");
+            $("iframe:visible").each(function(i, val) {
+                pics.append($("<div />").addClass("pic").attr("data-num", i+1));
+            });
+            $("body").append(pics);
+        });
+        $(".pic").live("dragover", function(e) {
+            //alert();
+            //alert(2);
+            if (e.preventDefault) {
+                e.preventDefault(); // Necessary. Allows us to drop.
+            }
+        });
+        $("#appsDock img:not(#trash):not(#add)").live("dragend", function(e) {
+            $(this).css("opacity", "1.0");
+            $("#pics").remove();
+            $(this).removeClass("grabbing");
+        });
+        $("body").live("drop", function(e) {
+            if (e.stopPropagation) {
+                e.stopPropagation(); // stops the browser from redirecting.
+            }
+            if(e.dataTransfer.files) {
+                var file = e.dataTransfer.files[0];
+                var reader = new FileReader();
+                reader.onloadend = function(evt) {
+                    console.log(evt.target.result);
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+        $(".pic").live("drop", function(e) {
+            //alert(2);
+            if (e.stopPropagation) {
+                e.stopPropagation(); // stops the browser from redirecting.
+            }
+            //console.log(e);
+            $("#pics").remove();
+            var div = e.currentTarget;
+            var num = $(div).attr("data-num");
+            var selector = "iframe:nth-child("+num+")";
+            $(selector).attr("src", $(window.curElem).attr("data-href"));
+            return false;
+        });
+        
+        $("#trash").live("dragover", function(e) {
+            //alert();
+            //alert(2);
+            if (e.preventDefault) {
+                e.preventDefault(); // Necessary. Allows us to drop.
+            }
+        });
+        $("#trash").live("drop", function(e) {
+            //alert(2);
+            if (e.stopPropagation) {
+                e.stopPropagation(); // stops the browser from redirecting.
+            }
+            //console.log(e);
+            $("#pics").remove();
+            var div = e.currentTarget;
+            //var num = $(div).attr("data-num");
+            //var selector = "iframe:nth-child("+num+")"
+            //$(selector).attr("src", $(window.curElem).attr("data-href"));
+            if($(window.curElem).hasClass("icon")) {
+                $(window.curElem).remove();
+                updateContent();
+                $(this).attr("src","Images/Icons/user-trash-full.svg");
+                setTimeout(function() {
+                    $("#trash").attr("src", "Images/Icons/user-trash.svg");
+                }, 1000);
+            }
+            return false
+        });
+    } else if(Modernizr.mq("all and (max-device-width:615px)")) {
+        //var s = new iScroll("wrapper");
+        $("#close").css("display","none");
+        $("#browser").attr("data-href", "http://m.wikipedia.org");
+        $("#appsDock img:not(#add):not(#trash)").live("click", function(e) {
+            //$(".first").attr("src", $(this).attr("data-href"));
+            //var w = window.open($(this).attr("data-href"),"_BLANK","width=320,height=480");
+            //var link = $("<a />").attr("href",$(this).attr("data-href")).attr("target","_BLANK").attr("rel","external").addClass("noDisplay").appendTo("body");
+            //link.click();
+            //link.remove();
+            //var s = $("<div />").css("height", "40px").css("width","100%").attr("onclick","location.href='about:blank'");
+            //$(".first").attr("src","javascript:alert()")
+            /*$.get($(this).attr("data-href"), function(data) {
+                console.log(data);
+                var d2 = $(data);
+                var d4 = d2.children("body");
+//                var d3 = $.base64.encode(data);
+                //$(".first").attr("src", "data:text/html;base64,"+d2);
+                $("#frameRep").html(d2);
+            });*/
+            //$("#frameRep").load($(this).attr("data-href"))
+        });
+        $("#trash").live("click", function(e) {
+            if(!window.quivering) {
+                $(".icon").addClass("quiver");
+                window.quivering=true;
+                $(".quiver").bind("click", function(e2) {
+                    e2.preventDefault();
+                    e2.stopPropagation();
+                    //$(this).remove();
+                    $(".quiver").unbind("click");
+                    $(".quiver").removeClass("quiver");
+                    $("#trash").attr("src","Images/Icons/user-trash-full.svg");
+                    setTimeout(function() {
+                        $("#trash").attr("src", "Images/Icons/user-trash.svg");
+                    }, 2000);
+                    window.quivering=false;
+                    $(this).fadeOut("slow", function() {
+                        $(this).remove();
+                        updateContent();
+                    });
+                    //window.quivering=false;
+                });
+            } else {
+                $(".quiver").unbind("click");
+                $(".quiver").removeClass("quiver");
+                window.quivering=false;
+            }
+        });
+    } else if(!Modernizr.draganddrop) {
+        $("#appsDock img:not(#add)").addClass("notMove");
+        window.curFrame=1;
+        $("#appsDock img:not(#add,#trash)").live("click", function(e) {
+            $("iframe:nth-child("+window.curFrame+")").attr("src",$(this).attr("data-href"));
+            if(window.curFrame<$("iframe:visible").length) {
+                window.curFrame+=1;
+            } else {
+                window.curFrame=1;
+            }
+        });
+        /*$("#trash").live("click", function(e) {
+                $(".icon").addClass("quiver");
+                window.quivering=true;
+            if(!window.quivering) {
+                $(".quiver").one("click", function(e2) {
+                    //$(this).remove();
+                    e2.preventDefault();
+                    e2.stopPropagation();
+                    $(".quiver").removeClass("quiver");
+                    $("#trash").attr("src","Images/Icons/user-trash-full.svg");
+                    setTimeout(function() {
+                        $("#trash").attr("src", "Images/Icons/user-trash.svg");
+                    }, 2000);
+                    $(this).fadeOut("slow", function() {
+                        $(this).remove();
+                        updateContent();
+                    });
+                    window.quivering=false;
+                });
+            } else {
+                $(".quiver").removeClass("quiver");
+                window.quivering=false;
+            }
+        });*/
+        $("#trash").live("click", function(e) {
+            if(!window.quivering) {
+                $(".icon").addClass("quiver");
+                window.quivering=true;
+                $(".quiver").bind("click", function(e2) {
+                    e2.preventDefault();
+                    e2.stopPropagation();
+                    //$(this).remove();
+                    $(".quiver").unbind("click");
+                    $(".quiver").removeClass("quiver");
+                    $("#trash").attr("src","Images/Icons/user-trash-full.svg");
+                    setTimeout(function() {
+                        $("#trash").attr("src", "Images/Icons/user-trash.svg");
+                    }, 2000);
+                    window.quivering=false;
+                    $(this).fadeOut("slow", function() {
+                        $(this).remove();
+                        updateContent();
+                    });
+                    //window.quivering=false;
+                });
+            } else {
+                $(".quiver").unbind("click");
+                $(".quiver").removeClass("quiver");
+                window.quivering=false;
+            }
+        });
+    }
+    function updateContent() {
+        var arr = [];
+        $(".icon").each(function(i, val) {
+            var src = $(val).attr("src");
+            var url = $(val).attr("data-href");
+            var nam = $(val).attr("title");
+            var obj = {
+                src:src,
+                url: url,
+                nam: nam
+            }
+            arr.push(obj);
+        });
+        //console.log(arr);
+        localStorage.setItem("widgets", JSON.stringify(arr));
+    }
+    function readContent() {
+        var arr = JSON.parse(localStorage.getItem("widgets"));
+        var arr2 = arr.reverse();
+        $.each(arr2, function(i, val) {
+            var img = $("<img />");
+            img.attr("src",val.src);
+            img.attr("data-href",val.url);
+            img.attr("title",val.nam);
+            img.attr("alt",val.nam);
+            img.attr("draggable","true");
+            img.addClass("icon");
+            img.attr("onerror", "imgError(this)");
+            img.prependTo("#appsDock");
+        });
+        if(!Modernizr.draganddrop) {
+            $(".icon").addClass("notMove");
+        }
+        if(Modernizr.mq("all and (max-device-width:615px)")) {
+            $("#")
+            $("#appsDock img:not(#add):not(#trash)").each(function(i,val) {
+                var v = $(val);
+                v.wrap($("<a />").attr("href",v.attr("data-href")).attr("target","_BLANK").addClass("iosGlitchLink"));
+            });
+        }
+    }
+    function addApp(url) {
+        var urlOrig = url;
+        if(!url.match("http") && !url.match("file:") && !url.match("data:") && !url.match("gopher:") && !url.match(/\.\//gi) && !url.match("about:") && !url.match("mailto:")) {
+            url = "http://"+url;
+        }
+        var urlA = url;
+        if(url.substring(url.length-2, url.length-1)=="/") {
+            url = url.substring(0, url.length-1);
+        }
+        var urlS = url.split("/");
+        //console.log(urlS.length)
+        //console.log(urlS[urlS.length-1].match("\."))
+        if(urlS[urlS.length-1].match(".") && urlS.length>3) {
+            var isDir = false;
+        } else {
+            var isDir = true;
+        }
+        /*if(isDir) {
+            //var iconUrl = url+"/icon";
+            var iconUrl = url+"/favicon.ico";
+        } else {
+            url="";
+            for(i=0;i<urlS.length-1;i++) {
+                url += urlS[i]+"/";
+            }
+            url = url.substring(0, url.length-1);
+            var iconUrl = url+"/favicon.ico";
+        }*/
+        var iconUrl = "http://g.etfv.co/"+escape(url)+"?defaulticon=http://www.w3.org/html/logo/downloads/HTML5_1Color_White.svg"
+        var img2add = $("<img />");
+        img2add.attr("src", iconUrl);
+        img2add.attr("class", "icon");
+        //console.log(2, urlA);
+        img2add.attr("data-href", urlA);
+        //Note to future self: remember that String.capitalize() isn't a built-in. It's up at the top. -G3n3r0
+        var urlName = url.replace(/(http:\/\/|https:\/\/|mailto:|gopher:\/\/|data:|about:|file:\/\/|www.|.com|m.|.org|.co.uk|.name|.net|mobile.)/gi, "").capitalize();
+        img2add.attr("alt", urlName);
+        img2add.attr("title", urlName);
+        //console.log(img2add);
+/*        if(new RegExp(img2add[0], "gi").test($(".icon-window").html())) {
+            $(".icon-window-apps").append(img2add);
+            if(!hash) {
+                openApp(urlA, img2add.attr("title"));
+            }
+        }*/
+        img2add.attr("draggable","true");
+        img2add.attr("onerror", "imgError(this)");
+        img2add.hide();
+        img2add.css("display","inline-block");
+        $("#appsDock").prepend(img2add);
+        img2add.fadeIn("slow");
+        updateContent();
+        if(!Modernizr.draganddrop) {
+            $(".icon").addClass("notMove");
+        }
+        if(Modernizr.mq("all and (max-device-width:480px)")) {
+            $("#appsDock img:not(#add):not(#trash)").each(function(i,val) {
+                var v = $(val);
+                v.wrap($("<a />").attr("href",v.attr("data-href")).attr("target","_BLANK"));
+            });
+        }
+        $('.icon').contextMenu(window.iconMenu);
+    }
+    $("#add").live("click", function(e) {
+        var url = prompt("Enter widget URL", "http://")
+        addApp(url);
+    });
+    $(".icon").live("error", function(e) {
+        alert(this);
+    });
+//    var myscroll = new iScroll("appsDock");
+    readContent();
+    $.contextMenu.theme='gloss';
+    window.iconMenu = [
+        {'Delete': {onclick: function(menuItem, menu) {
+                $("#trash").attr("src","Images/Icons/user-trash-full.svg");
+                setTimeout(function() {
+                    $("#trash").attr("src", "Images/Icons/user-trash.svg");
+                }, 2000);
+                window.quivering=false;
+                $(this).fadeOut("slow", function() {
+                    $(this).remove();
+                    updateContent();
+                });
+                $(".grabbing").removeClass("grabbing")
+            }},
+            'Info': function(menuItem, menu) {
+                var name = $(this).attr("title");
+                var url = $(this).attr("data-href");
+                var iconUrl = $(this).attr("src");
+                alert("Name: "+name+"\nURL: "+url+"\nIcon URL: "+iconUrl)
+            },
+            'Edit': function(menuItem, menu) {
+                var curUrl = $(this).attr("data-href");
+                var url = prompt("Enter new URL", curUrl);
+                if(!url.match("http") && !url.match("file:") && !url.match("data:") && !url.match("gopher:") && !url.match(/\.\//gi) && !url.match("about:") && !url.match("mailto:")) {
+                    url = "http://"+url;
+                }
+                var newIcon = "http://g.etfv.co/"+escape(url)+"?defaulticon=http://www.w3.org/html/logo/downloads/HTML5_1Color_White.svg"
+                $(this).attr("data-href", url);
+                $(this).attr("src", newIcon);
+                updateContent();
+            },
+            'New App': function(menuItem, menu) {
+                $("#add").click();
+            }
+        }
+    ]
+    $('.icon').contextMenu(window.iconMenu);
+//    tempIconMenu[0].Delete.disabled=true;
+//    var tempIconMenu = window.iconMenu;
+//    $("#appsDock img:not(.icon)").contextMenu(tempIconMenu);
+    $("#appsDock img").live("contextmenu", function(e) {
+        e.preventDefault();
+        return false;
+    });
+    //$("#appsDock").css({"overflow-x":"auto","overflow-y":"auto"});
+    $(".icon").live("mousedown", function(e) {
+        $(this).addClass("grabbing");
+    });
+    $(".icon").live("mouseup", function(e) {
+        $(this).removeClass("grabbing");
+    });
+    $(".icon").live("contextmenu", function(e) {
+        e.preventDefault();
+        //$(this).attr("src","http://www.w3.org/html/logo/badge/html5-badge-h-solo.png");
+        //$(this).attr("src", "http://www.w3.org/html/logo/downloads/HTML5_1Color_White.svg");
+        $(this).removeClass("grabbing");
+    });
+    if(typeof localStorage.beenHereB4=="undefined") {
+        var stg = "Well butter me and call me a croissant! You're new here! Want a tutorial?";
+        localStorage.beenHereB4 = "babyhead";
+        if(confirm(stg)) {
+            var w = window.open("tutorial.html", "", "width=320, height=480");
+            w.focus();
+        }
+    }
+    window.spinning = false;
+    $("html").live("keydown", function(e) {
+        if(e.ctrlKey && e.altKey && e.which===83) {
+            e.preventDefault();
+            if(!window.spinning) {
+                $("body").addClass("spin");
+                window.spinning = true;
+            } else {
+                $("body").removeClass("spin");
+                window.spinning = false;
+            }
+        }
+    });
+});
+function imgError(me) {
+//    alert("Smurfabunga!");
+    if(Modernizr.svg) {
+        me.setAttribute("src", "http://www.w3.org/html/logo/downloads/HTML5_1Color_White.svg");
+    } else {
+        me.setAttribute("src", "http://www.w3.org/html/logo/downloads/HTML5_1Color_White.png");
+    }
+}
+</script>
+<!--<script src="iscroll.js"></script>
+<script>
+var myScroll;
+function loaded() {
+    setTimeout(function () {
+    	myScroll = new iScroll('wrapper');
+	}, 100);
+}
+//window.addEventListener('load', loaded, false);
+window.onload = loaded;
+</script>-->
+</head>
+<body id="wrapper">
+<!--<h1 id="up">&#8593;</h1>-->
+<iframe class="first"></iframe><iframe></iframe><!--<iframe></iframe><iframe></iframe>-->
+<!--<div id="frameRep"></div>-->
+<!--<h1 id="down">&#8595;</h1>-->
+<!--<span id="scroller">-->
+<div id="appsDock">
+<img src="Images/Icons/Facebook.svg" data-href="defwidgets/Facebook.html" draggable="true" title="Facebook" alt="Facebook" />
+<img src="Images/Icons/internet-web-browser.svg" data-href="defwidgets/Browser.html" draggable="true" title="Browser" alt="Browser" id="browser" />
+<img src="Images/Icons/applications-office.svg" data-href="defwidgets/Word.html" draggable="true" title="Text Editor" alt="Text Editor" />
+<!--<img src="http://www.w3.org/html/logo/badge/html5-badge-h-solo.png" draggable="true" data-href="http://w3.org/" />
+<img src="http://www.w3.org/html/logo/badge/html5-badge-v-solo.png" draggable="true" data-href="http://w3.org/html5" />-->
+<!--<img src="http://www.clker.com/cliparts/2/f/6/1/11949856271997454136tasto_2_architetto_franc_01.svg.hi.png" draggable="false" id="add" />-->
+<span id="oldies">
+<img src="Images/Icons/process-stop.svg" draggable="true" data-href="about:blank" id="close" title="Close" alt="Close" />
+<img src="Images/Icons/list-add.svg" draggable="false" id="add" alt="[+]" />
+<!--<img src="http://fc06.deviantart.net/fs71/f/2011/176/4/a/disgustoobaloo_by_nicocw-d3jytz0.png" draggable="false" id="trash" />-->
+<img src="Images/Icons/user-trash.svg" draggable="false" id="trash" alt="[Trash]" />
+</span>
+</div>
+<!--</span>-->
+</body>
+</html>
