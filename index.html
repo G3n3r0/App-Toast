@@ -179,6 +179,11 @@ body {
 <link rel="stylesheet" href="jquery.contextmenu.images/jquery.contextmenu.css" />
 <script src="jquery.contextmenu.images/jquery.contextmenu.js"></script>
 <script>
+window.onload = function() {
+    if(!jQuery || !$) {
+        alert("Unsupported!")
+    }
+}
 $(document).ready(function() {
     if(!localStorage.widgets) {
         localStorage.widgets="[]";
