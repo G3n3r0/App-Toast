@@ -64,7 +64,7 @@ $(document).ready(function() {
     }
     function updateFileSelect() {
         var files = fileBrowse();
-        console.log(fileBrowse());
+        //console.log(fileBrowse());
         $("#fileSelect .rem").remove();
         $.each(files, function(i, val) {
             var opt = $("<option />");
@@ -149,11 +149,11 @@ $(document).ready(function() {
         var url = "data:text/rtf;charset=utf-8;base64,"+b64;
         $("<iframe />").attr("src",url).addClass("fileExp").attr("width","0").attr("height","0").appendTo("body");
         //var w = window.open(url,"","width=300,height=300");
-        console.log(url)
+        //console.log(url)
     }
     $("#exp").click(exportToRTF);
     $("#bold").click(function(e) {
-        console.log(getCaret(document.getElementById("curDoc")))
+        //console.log(getCaret(document.getElementById("curDoc")))
     });
     $("*").keydown(function(e) {
         if(e.ctrlKey && e.keyCode==83) {
