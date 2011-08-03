@@ -179,18 +179,13 @@ body {
 <link rel="stylesheet" href="jquery.contextmenu.images/jquery.contextmenu.css" />
 <script src="jquery.contextmenu.images/jquery.contextmenu.js"></script>
 <script>
-window.onload = function() {
-    if(!jQuery || !$) {
-        alert("Unsupported!")
-    }
-}
 $(document).ready(function() {
     if(!localStorage.widgets) {
         localStorage.widgets="[]";
     }
     if(!Modernizr.svg) {
         $("#appsDock img").each(function(i, val) {
-            console.log(val);
+            //console.log(val);
             $(val).attr("src", $(val).attr("src").replace(/\.svg/gi,".png"));
         });
     }
@@ -261,7 +256,7 @@ $(document).ready(function() {
                 var file = e.dataTransfer.files[0];
                 var reader = new FileReader();
                 reader.onloadend = function(evt) {
-                    console.log(evt.target.result);
+                    //console.log(evt.target.result);
                 }
                 reader.readAsDataURL(file);
             }
